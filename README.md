@@ -17,6 +17,7 @@ Struture de chacune des feuilles : les libellés comptables en lignes et les ann
 
 #### [Télécharger les données](https://github.com/Hines98/CAP-PME/blob/main/Ele%CC%81ments%20e%CC%81tats%20financiers%20-%20Portfolio.xlsx)
 #### [Télécharger le rapport PBI sous format PDF](https://github.com/Hines98/CAP-PME/blob/main/Rapport%20PBI.pdf)
+#### [Télécharger le fichier Mode de calcul](https://github.com/Hines98/CAP-PME/blob/main/Mode%20de%20calcul.pdf)
 
 ## Livrable
 On a un rapport Power BI avec plusieurs onglets.
@@ -40,6 +41,6 @@ On a un rapport Power BI avec plusieurs onglets.
 - (8) **Lecture investisseurs - Pro forma** : onglet présentant les indicateurs pro forma (DSCR, couverture des intérêts pro forma, trésorerie après service de la dette, trésorerie après service de la dette sur CA) sur la base des hypothèses investisseurs et les messages d'interprétation selon seuils
 
 **NB :**
-- Consultez le guide utilisateur pour retrouver les formules de calcul des KPIs
+- Consultez le ficher "Mode de calcul" pour retrouver les formules de calcul des KPIs
 - Les projections s'appuient sur des paramètres métier saisis par l'expert-comptable : hypothèses d'activité (croissance du CA, évolution des charges...), hypothèses de structure (BFR, CAPEX) et hypothèses de financement (montant, taux, durée, DSCR cible). Ces paramètres permettent de générer des scénarios multiples et de tester la sensibilité du modèle.
 
