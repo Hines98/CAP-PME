@@ -16,7 +16,7 @@ Un unique fichier excel avec au moins deux feuilles : "Compte de résultat" et "
 Struture de chacune des feuilles : les libellés comptables en lignes et les années en colonnes
 
 #### [Télécharger les données](https://github.com/Hines98/CAP-PME/blob/main/Ele%CC%81ments%20e%CC%81tats%20financiers%20-%20Portfolio.xlsx)
-#### [Télécharger le rapport PBI sous format PDF]()
+#### [Télécharger le rapport PBI sous format PDF](https://github.com/Hines98/CAP-PME/blob/main/Rapport%20PBI.pdf)
 
 ## Livrable
 On a un rapport Power BI avec plusieurs onglets.
