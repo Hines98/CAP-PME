@@ -32,7 +32,11 @@ On a un rapport Power BI avec plusieurs onglets.
 <img width="1307" height="734" alt="image" src="https://github.com/user-attachments/assets/91993902-9de8-4cb8-ad82-6f718aa78180" />
  
 - (5) **Prévisionnel X ans - Exploitation** : cet onglet présente le compte de résultat prévisionnel complet sur un horizon de 5 ans maximum avec des paramètres pour des scénarios multiples
+
+  <img width="1286" height="729" alt="image" src="https://github.com/user-attachments/assets/054fb70e-1f0c-41ef-9310-b3e86d0f0688" />
+
 - (7) **Analyse Financière Prévisionnelle** : cet onglet présente les mêmes indicateurs que dans l'onglet (1)
+  
 - (8) **Lecture investisseurs - Pro forma** : onglet présentant les indicateurs pro forma (DSCR, couverture des intérêts pro forma, trésorerie après service de la dette, trésorerie après service de la dette sur CA) sur la base des hypothèses investisseurs et les messages d'interprétation selon seuils
 
 **NB :**
