@@ -22,9 +22,15 @@ Struture de chacune des feuilles : les libellés comptables en lignes et les ann
 On a un rapport Power BI avec plusieurs onglets.
 
 - (1) **KPIs & Ratios - Année de Référence** : un onglet présentant  15 indicateurs de l'année de référence organisés en 3 catégories (performance opérationnele, endettement, structure financière et liquidité) avec des codes couleurs automatiques selon secteur d'activité et des commentaires d'interprétation intégrés (BFR/CA, DSCR)
+
+<img width="1173" height="664" alt="image" src="https://github.com/user-attachments/assets/40f6a7f8-454b-4c6d-8c7c-8db2442e5884" />
+
 - (2) **Hypothèses investisseurs** : un onglet de saisie des paramètres de financement (montant, taux, durée)
 - (3) **Capacité de financement soutenable** : un onglet qui calcule le montant maximal d'emprunt compatible avec la CAF et l'annuité maximale soutenable
 - (4) **Suivi des amortissements** : onglet présentant le tableau d'amortissement dynamique (annuités constantes)
+
+<img width="1307" height="734" alt="image" src="https://github.com/user-attachments/assets/91993902-9de8-4cb8-ad82-6f718aa78180" />
+ 
 - (5) **Prévisionnel X ans - Exploitation** : cet onglet présente le compte de résultat prévisionnel complet sur un horizon de 5 ans maximum avec des paramètres pour des scénarios multiples
 - (7) **Analyse Financière Prévisionnelle** : cet onglet présente les mêmes indicateurs que dans l'onglet (1)
 - (8) **Lecture investisseurs - Pro forma** : onglet présentant les indicateurs pro forma (DSCR, couverture des intérêts pro forma, trésorerie après service de la dette, trésorerie après service de la dette sur CA) sur la base des hypothèses investisseurs et les messages d'interprétation selon seuils
