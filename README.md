@@ -1,5 +1,6 @@
 ## CAP PME : une PME peut-elle financer son investissement par l'emprunt ?
 
+<p align="justify">
 ## Contexte
 Avant de financer un investissement, un dirigeant de PME et son expert-comptable doivent savoir si l'entreprise pourra rembourser l'emprunt sans mettre sa trésorerie en danger. C'est la situation d'une biscuiterie industrielle de 60 salariés qui souhaite emprunter 3 M€ pour une nouvelle ligne de production. Une question se pose : la biscuiterie peut-elle financer sa nouvelle ligne de production de 3 M€ par un emprunt bancaire, et sinon, combien peut-elle raisonnablement emprunter ?
 
@@ -59,4 +60,6 @@ Pour aller plus loin, l'outil pourrait lire automatiquement les liasses fiscales
 - Power BI (Power Query et DAX) pour la projection sur 5 ans, le tableau d'amortissement et les scénarios paramétrables ; analyse financière (soldes intermédiaires de gestion, capacité d'autofinancement, DSCR, besoin en fonds de roulement).
 
 Liens : [Notebook Python](https://github.com/Hines98/CAP-PME/blob/main/Script.ipynb) · [Fichier Excel type à remplir](https://github.com/Hines98/CAP-PME/raw/refs/heads/main/Etats_financiers_power_bi.xlsx) · [Référentiel liasse fiscale](https://github.com/Hines98/CAP-PME/blob/main/Referentiel_liasse.csv) · [Rapport Power BI (.pbix)] · [Rapport PDF]
+
+</p>
 
