@@ -1,0 +1,139 @@
+﻿code;intitule_officiel;agregat;signe_agregat;sens_resultat;statut
+AB;Frais d'établissement;Actif immobilisé;1;;Facultatif
+AC;Frais d'établissement;Actif immobilisé;-1;;Facultatif
+CX;Frais de développement;Actif immobilisé;1;;Facultatif
+CQ;Frais de développement;Actif immobilisé;-1;;Facultatif
+AF;Concessions, brevets et droits similaires;Actif immobilisé;1;;Facultatif
+AG;Concessions, brevets et droits similaires;Actif immobilisé;-1;;Facultatif
+AH;Fonds commercial;Actif immobilisé;1;;Facultatif
+AI;Fonds commercial;Actif immobilisé;-1;;Facultatif
+AJ;Autres immobilisations incorporelles;Actif immobilisé;1;;Facultatif
+AK;Autres immobilisations incorporelles;Actif immobilisé;-1;;Facultatif
+AL;Immobilisations incorporelles en cours, avances et acomptes;Actif immobilisé;1;;Facultatif
+AM;Immobilisations incorporelles en cours, avances et acomptes;Actif immobilisé;-1;;Facultatif
+AN;Terrains;Actif immobilisé;1;;Facultatif
+AO;Terrains;Actif immobilisé;-1;;Facultatif
+AP;Constructions;Actif immobilisé;1;;Facultatif
+AQ;Constructions;Actif immobilisé;-1;;Facultatif
+AR;Installations techniques, matériel et outillage industriels;Actif immobilisé;1;;Facultatif
+AS;Installations techniques, matériel et outillage industriels;Actif immobilisé;-1;;Facultatif
+AT;Autres immobilisations corporelles;Actif immobilisé;1;;Facultatif
+AU;Autres immobilisations corporelles;Actif immobilisé;-1;;Facultatif
+AV;Immobilisations corporelles en cours, avances et acomptes;Actif immobilisé;1;;Facultatif
+AW;Immobilisations corporelles en cours, avances et acomptes;Actif immobilisé;-1;;Facultatif
+CS;Participations;Actif immobilisé;1;;Facultatif
+CT;Participations;Actif immobilisé;-1;;Facultatif
+CU;Titres immobilisés de l'activité de portefeuille;Actif immobilisé;1;;Facultatif
+CV;Titres immobilisés de l'activité de portefeuille;Actif immobilisé;-1;;Facultatif
+BB;Créances rattachées à des participations;Actif immobilisé;1;;Facultatif
+BC;Créances rattachées à des participations;Actif immobilisé;-1;;Facultatif
+BD;Autres titres immobilisés;Actif immobilisé;1;;Facultatif
+BE;Autres titres immobilisés;Actif immobilisé;-1;;Facultatif
+BF;Prêts;Actif immobilisé;1;;Facultatif
+BG;Prêts;Actif immobilisé;-1;;Facultatif
+BH;Autres immobilisations financières;Actif immobilisé;1;;Facultatif
+BI;Autres immobilisations financières;Actif immobilisé;-1;;Facultatif
+BL;Matières premières, approvisionnements;Stocks;1;;Facultatif
+BM;Matières premières, approvisionnements;Stocks;-1;;Facultatif
+BN;En cours de production de biens;Stocks;1;;Facultatif
+BO;En cours de production de biens;Stocks;-1;;Facultatif
+BP;En cours de production de services;Stocks;1;;Facultatif
+BQ;En cours de production de services;Stocks;-1;;Facultatif
+BR;Produits intermédiaires et finis;Stocks;1;;Facultatif
+BS;Produits intermédiaires et finis;Stocks;-1;;Facultatif
+BT;Marchandises;Stocks;1;;Facultatif
+BU;Marchandises;Stocks;-1;;Facultatif
+BV;Avances et acomptes versés sur commandes;Autres actifs circulants;1;;Facultatif
+BW;Avances et acomptes versés sur commandes;Autres actifs circulants;-1;;Facultatif
+BX;Clients et comptes rattachés;Créances clients;1;;Indispensable
+BY;Clients et comptes rattachés;Créances clients;-1;;Facultatif
+BZ;Autres créances;Autres actifs circulants;1;;Facultatif
+CA;Autres créances;Autres actifs circulants;-1;;Facultatif
+CB;Capital souscrit et appelé, non versé;Autres actifs circulants;1;;Facultatif
+CC;Capital souscrit et appelé, non versé;Autres actifs circulants;-1;;Facultatif
+CD;Valeurs mobilières de placement;Trésorerie;1;;Facultatif
+CE;Valeurs mobilières de placement;Trésorerie;-1;;Facultatif
+CF;Disponibilités;Trésorerie;1;;Indispensable
+CG;Disponibilités;Trésorerie;-1;;Facultatif
+CH;Charges constatées d'avances;Autres actifs circulants;1;;Facultatif
+CI;Charges constatées d'avances;Autres actifs circulants;-1;;Facultatif
+AA;Capital souscrit non appelé;Autres actifs;1;;Facultatif
+CW;Frais d'émission d'emprunt;Autres actifs;1;;Facultatif
+CM;Primes de remboursement des emprunts;Autres actifs;1;;Facultatif
+CN;Écarts de conversion actif et différences d'évaluation;Autres actifs;1;;Facultatif
+DA;Capital social ou individuel;Capitaux propres;1;;Indispensable
+DB;Primes d'émission, de fusion, d'apport;Capitaux propres;1;;Facultatif
+DC;Écarts de réévaluation;Capitaux propres;1;;Facultatif
+DD;Réserve légale;Capitaux propres;1;;Facultatif
+DE;Réserves statutaires ou contractuelles;Capitaux propres;1;;Facultatif
+DF;Réserves réglementées;Capitaux propres;1;;Facultatif
+DG;Autres réserves;Capitaux propres;1;;Facultatif
+DH;Report à nouveau;Capitaux propres;1;;Facultatif
+DI;RÉSULTAT DE L'EXERCICE (bénéfice ou perte);Capitaux propres;1;;Indispensable
+DJ;Subventions d'investissement;Capitaux propres;1;;Facultatif
+DK;Provisions réglementées;Capitaux propres;1;;Facultatif
+DM;Produit des émissions de titres participatifs;Autres fonds propres;1;;Facultatif
+DN;Avances conditionnées;Autres fonds propres;1;;Facultatif
+DP;Provisions pour risques;Provisions;1;;Facultatif
+DQ;Provisions pour charges;Provisions;1;;Facultatif
+DS;Emprunts obligatoires convertibles;Dettes financières;1;;Facultatif
+DT;Autres emprunts obligatoires;Dettes financières;1;;Facultatif
+DU;Emprunts et dettes auprès des établissements de crédit;Dettes financières;1;;Indispensable
+DV;Emprunts et dettes financières divers;Dettes financières;1;;Facultatif
+D1;Instruments financiers à terme;Autres dettes à court terme;1;;Facultatif
+DW;Avances et acomptes reçus sur commandes en cours;Autres dettes à court terme;1;;Facultatif
+DX;Dettes fournisseurs et comptes rattachés;Dettes fournisseurs;1;;Indispensable
+DY;Dettes fiscales et sociales;Dettes fiscales et sociales;1;;Indispensable
+DZ;Dettes sur immobilisations et comptes rattachés;Autres dettes à court terme;1;;Facultatif
+EA;Autres dettes;Autres dettes à court terme;1;;Facultatif
+EB;Produits constatés d'avance;Autres dettes à court terme;1;;Facultatif
+ED;Écart de conversion passif et différences d'évaluation;Autres passifs;1;;Facultatif
+EG;Dettes et produits constatés d'avance à moins d'un an;Dettes à moins d'un an;1;;Indispensable
+EH;Dont concours bancaires courants, et soldes créditeurs de banques et CCP;Concours bancaires courants;1;;Facultatif
+FC;Ventes de marchandises;Chiffre d'affaires;1;1;Facultatif
+FF;Production vendue - Biens;Chiffre d'affaires;1;1;Facultatif
+FI;Production vendue - Services;Chiffre d'affaires;1;1;Facultatif
+FM;Production stockée;Production stockée et immobilisée;1;1;Facultatif
+FN;Production immobilisée;Production stockée et immobilisée;1;1;Facultatif
+FO;Subventions d'exploitation;Subventions d'exploitation;1;1;Facultatif
+FP;Reprises sur amortissements et provisions;Reprises (exclues de la CAF);1;1;Facultatif
+F1;Produits des cessions d'immobilisations incorporelles et corporelles;Autres produits et charges d'exploitation;1;1;Facultatif
+FQ;Autres produits;Autres produits et charges d'exploitation;1;1;Facultatif
+FS;Achats de marchandises (y compris droits de douane);Coût des marchandises vendues;1;-1;Facultatif
+FT;Variation de stocks (marchandises);Coût des marchandises vendues;1;-1;Facultatif
+FU;Achats de matières premières et autres approvisionnements (y compris droits de douane);Matières consommées;1;-1;Facultatif
+FV;Variation de stocks (matières premières et approvisionnements);Matières consommées;1;-1;Facultatif
+FW;Autres achats et charges externes;Charges externes;1;-1;Indispensable
+FX;Impôts, taxes et versements assimilés;Impôts et taxes;1;-1;Attendu
+FY;Salaires et traitements;Charges de personnel;1;-1;Attendu
+FZ;Cotisations sociales;Charges de personnel;1;-1;Attendu
+GA;Dotations d'exploitation sur immobilisations : dotations aux amortissements;Dotations (réintégrées dans la CAF);1;-1;Indispensable
+GB;Dotations d'exploitation sur immobilisations : dotations aux dépréciations;Dotations (réintégrées dans la CAF);1;-1;Facultatif
+GC;Dotations d'exploitation sur actif circulant : dotations aux dépréciations;Dotations (réintégrées dans la CAF);1;-1;Facultatif
+GD;Dotations d'exploitation pour risques et charges : dotations aux provisions;Dotations (réintégrées dans la CAF);1;-1;Facultatif
+G1;Valeurs comptables des immobilisations incorporelles et corporelles cédées;Autres produits et charges d'exploitation;1;-1;Facultatif
+GE;Autres charges;Autres produits et charges d'exploitation;1;-1;Facultatif
+GH;Bénéfice attribué ou perte transférée;Opérations en commun;1;1;Facultatif
+GI;Perte supportée ou bénéfice transféré;Opérations en commun;1;-1;Facultatif
+GJ;Produits financiers de participations;Produits financiers;1;1;Facultatif
+GK;Produits des autres valeurs mobilières et créances de l'actif immobilisé;Produits financiers;1;1;Facultatif
+GL;Autres intérêts et produits assimilés;Produits financiers;1;1;Facultatif
+GM;Reprises sur dépréciations;Reprises financières;1;1;Facultatif
+GN;Différences positives de change;Produits financiers;1;1;Facultatif
+GO;Produits nets sur cessions de valeurs mobilières de placement et d'instruments de trésorerie;Produits financiers;1;1;Facultatif
+G2;Produits des cessions d'immobilisations financières;Produits financiers;1;1;Facultatif
+GQ;Dotations financières aux amortissements et provisions;Dotations financières;1;-1;Facultatif
+GR;Intérêts et charges assimilées;Intérêts de la dette;1;-1;Indispensable
+GS;Différences négatives de change;Autres charges financières;1;-1;Facultatif
+G3;Valeurs comptables des immobilisations financières cédées;Autres charges financières;1;-1;Facultatif
+GT;Charges nettes sur cessions de valeurs mobilières de placement;Autres charges financières;1;-1;Facultatif
+HD;Produits exceptionnels;Résultat exceptionnel;1;1;Facultatif
+HH;Charges exceptionnelles;Résultat exceptionnel;1;-1;Facultatif
+HJ;Participation des salariés aux résultats de l'entreprise;Participation des salariés;1;-1;Facultatif
+HK;Impôts sur les bénéfices;Impôt sur les sociétés;1;-1;Attendu
+HN;BÉNÉFICE OU PERTE;Contrôle du résultat;1;;Attendu
+ØJ;Immobilisations : acquisitions, créations, apports et virements de poste à poste – TOTAL GÉNÉRAL;Investissements;1;;Attendu
+VJ;Emprunts souscrits en cours d'exercice;Flux de dette;1;;Facultatif
+VK;Emprunts remboursés en cours d'exercice;Remboursement de la dette existante;1;;Indispensable
+ZE;Dividendes;Flux de capitaux propres;1;;Facultatif
+YP;Effectif moyen du personnel;Information;1;;Facultatif
