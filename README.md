@@ -11,7 +11,7 @@ Il s'agit d'un cas construit pour la démonstration, sur le modèle d'une biscui
 L’outil fonctionne dès un exercice, mais trois sont recommandés : il en faut au moins deux pour calculer une évolution, et trois pour repérer une année atypique.
 
 ## Méthodologie
-J’ai d’abord mis en place un format d’entrée universel des données. Pour utiliser l’outil, l’entreprise saisit manuellement les montants de sa liasse fiscale dans un fichier Excel type ([télécharger le fichier type](https://github.com/Hines98/CAP-PME/blob/main/Fichier_type_etats_financiers.xlsx)), où chaque montant est repéré par son code de liasse fiscale. Les intitulés des postes varient d’un cabinet comptable à l’autre, les codes officiels non. L’outil fonctionne ainsi pour n’importe quelle PME au régime réel. Un script Python vérifie ensuite les codes, signale les postes indispensables à l’outil final laissés vides, contrôle que l’actif égale le passif et que le résultat recalculé égale le résultat déclaré, car une projection construite sur des comptes faux conduirait à une décision fausse. Le script produit enfin un fichier de 23 agrégats, connecté à Power BI.
+J’ai d’abord mis en place un format d’entrée universel des données. Pour utiliser l’outil, l’entreprise saisit manuellement les montants de sa liasse fiscale dans un fichier Excel type (*[télécharger le fichier type](https://github.com/Hines98/CAP-PME/blob/main/Fichier_type_etats_financiers.xlsx)*, où chaque montant est repéré par son code de liasse fiscale. Les intitulés des postes varient d’un cabinet comptable à l’autre, les codes officiels non. L’outil fonctionne ainsi pour n’importe quelle PME au régime réel. Un script Python vérifie ensuite les codes, signale les postes indispensables à l’outil final laissés vides, contrôle que l’actif égale le passif et que le résultat recalculé égale le résultat déclaré, car une projection construite sur des comptes faux conduirait à une décision fausse. Le script produit enfin un fichier de 23 agrégats, connecté à Power BI.
 
 ## Livrable
 Le rapport Power BI compte six onglets, organisés dans l’ordre où l’utilisateur s’en sert : choisir ses hypothèses, faire le diagnostic de l’année de référence, définir l’emprunt, puis projeter la situation sur 5 ans jusqu’au verdict. Les taux de prévision se saisissent dans un panneau à gauche, commun à toutes les pages. Une modification se répercute donc immédiatement partout. Les pages qui peuvent signaler un risque affichent la même légende avec une icône rouge apparaît dès qu’un seuil critique est franchi.
@@ -30,7 +30,7 @@ Le verdict de chaque année repose sur deux indicateurs. Le premier, le DSCR, co
 ## Résultats clés
 Pour la biscuiterie, les ventes ont progressé de 7,8% puis de 8,1% entre 2023 et 2025, et les charges d'exploitation de 7,1 % puis de 7,0 %. Le scénario tendance retient donc 8 % et 7 %, et le scénario prudent 4% et 4%. Les dotations suivent le même taux que les ventes, puisque l'entreprise investit chaque année une part de ses ventes. Les investissements courants sont fixés à 5 % du chiffre d'affaires, le niveau d'une année normale dans ses comptes (4,7 % en 2023, 3,8 % en 2025 ; 2024 est exceptionnelle à 9,9 %) et la moyenne des PME industrielles selon l'INSEE. L'impôt est au taux normal de 25 %.
 
-**Les résultats ci-dessous sont obtenus avec les hypothèses du scénario prudent : ventes, charges d’exploitation et dotations en hausse de 4 % par an, investissements courants à 5 % du chiffre d’affaires, impôt à 25 %, et un emprunt de 3 M€ sur 7 ans à 3,55 %.**
+***Les résultats ci-dessous sont obtenus avec les hypothèses du scénario prudent : ventes, charges d’exploitation et dotations en hausse de 4 % par an, investissements courants à 5 % du chiffre d’affaires, impôt à 25 %, et un emprunt de 3 M€ sur 7 ans à 3,55 %.***
 
 Avec l'emprunt de 3 M€ sur 7 ans, le DSCR est de 0,74 la première année : l'entreprise devrait rembourser 1,04 M€ (dont 0,55 M€ pour ses emprunts déjà en cours), alors que son activité ne dégage que 0,78 M€. Le DSCR reste sous 1 pendant quatre ans. Pour comparaison, compte tenu de ses emprunts actuels et avec un DSCR cible de 1,40, la biscuiterie ne pourrait emprunter qu'environ 120 000 € de plus.
 
@@ -40,7 +40,7 @@ Enfin, la trésorerie devient négative dès la deuxième année, même sans le 
 
 Cette conclusion vaut aussi dans le scénario tendance : même avec une croissance de 8 % par an, la trésorerie reste négative les cinq années avec l'emprunt de 3 M€.
 
-## Recommandation
+## Recommandations
 La biscuiterie nedevrait pas financer la ligne de production par un emprunt de 3 M€. Pendant quatre ans, l'activité ne dégagerait pas assez pour couvrir les remboursements, et l'entreprise devrait puiser dans une trésorerie déjà en baisse. Il faudrait plutôt limiter l'emprunt à 2 M€ au maximum, sur 10 ans, et financer le reste par un apport des associés ou une aide publique. Mais avant tout engagement, l'entreprise doit mettre en place un plan d'amélioration de sa trésorerie puisque celle-ci se dégrade même sans le projet.
 
 ## Limites et suites possibles
