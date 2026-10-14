@@ -9,7 +9,7 @@ Pour l'aider à décider, j'ai construit un outil qui lit ses comptes, projette 
 Il s'agit d'un cas construit pour la démonstration, sur le modèle d'une biscuiterie industrielle de 60 salariés réalisant 12 M€ de chiffre d'affaires. Les comptes couvrent trois exercices (2023 à 2025) et suivent le format de la liasse fiscale française : 138 postes repérés par leur code officiel, regroupés en 23 agrégats pour l'analyse. Ils reproduisent les ratios moyens du secteur publiés par l'INSEE et les délais de paiement relevés par la Banque de France. Les autres postes, comme les stocks et les créances clients, découlent de l'activité selon des hypothèses plausibles, et les trois exercices sont cohérents entre eux : le bilan de fin d'année devient celui du début de l'année suivante, et le bilan s'équilibre chaque année.
 
 
-#### [Télécharger les données](https://github.com/Hines98/CAP-PME/blob/main/Ele%CC%81ments%20e%CC%81tats%20financiers%20-%20Portfolio.xlsx)
+#### [Télécharger les données traitées](https://github.com/Hines98/CAP-PME/raw/refs/heads/main/Etats_financiers_power_bi.xlsx))
 #### [Télécharger le rapport PBI](https://github.com/Hines98/CAP-PME/blob/main/Rapport%20PBI.pdf)
 #### [Télécharger le fichier Mode de calcul](https://github.com/Hines98/CAP-PME/blob/main/Mode%20de%20calcul.pdf)
 
