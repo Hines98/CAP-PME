@@ -10,7 +10,7 @@ Il s'agit d'un cas construit pour la démonstration, sur le modèle d'une biscui
 
 
 #### [Télécharger le référentiel de la liasse financière](https://github.com/Hines98/CAP-PME/blob/main/Referentiel_liasse.csv)
-#### [Télécharger les données traitées](https://github.com/Hines98/CAP-PME/raw/refs/heads/main/Etats_financiers_power_bi.xlsx))
+#### [Télécharger les données traitées](https://github.com/Hines98/CAP-PME/raw/refs/heads/main/Etats_financiers_power_bi.xlsx)
 #### [Télécharger le rapport PBI](https://github.com/Hines98/CAP-PME/blob/main/Rapport%20PBI.pdf)
 #### [Télécharger le fichier Mode de calcul](https://github.com/Hines98/CAP-PME/blob/main/Mode%20de%20calcul.pdf)
 
