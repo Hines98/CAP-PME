@@ -1,46 +1,52 @@
+## CAP PME : une PME peut-elle financer son investissement par l'emprunt ?
+
 ## Contexte
-Dans le cadre de l'accompagnement des PME dans leur développement, les cabinets d'expertise comptable ont besoin d'outils structurés pour aider leurs clients à préparer une première levée de fonds. Ces entreprises doivent pouvoir présenter aux investisseurs régionaux des projections financières crédibles et des indicateurs de performance solides, tout en évaluant leur capacité réelle d'endettement.
+Avant de financer un investissement, un dirigeant de PME et son expert-comptable doivent savoir si l'entreprise pourra rembourser l'emprunt sans mettre sa trésorerie en danger. C'est la situation d'une biscuiterie industrielle de 60 salariés qui souhaite emprunter 3 M€ pour une nouvelle ligne de production. Une question se pose : la biscuiterie peut-elle financer sa nouvelle ligne de production de 3 M€ par un emprunt bancaire, et sinon, combien peut-elle raisonnablement emprunter ?
 
-L'outil CAP PME s'appuie sur le bilan et le compte de résultat d'une année de référence pour générer automatiquement des projections financières sur 3 à 5 ans et produire une analyse investisseurs complète. Le projet répond à ce besoin en fournissant un tableau de bord Power BI complet permettant aux experts-comptables de piloter la performance financière de leurs clients PME et de produire une lecture investisseurs professionnelle.
-
-## Objectifs
-Développer un outil de pilotage Power BI permettant d'analyser la santé financière actuelle d'une PME, de projeter son évolution sur 3 à 5 ans, et d'estimer sa capacité de financement soutenable pour préparer une levée de fonds. Plus spécifiquement :
-- Analyser la performance historique via 15 KPIs financiers clés (rentabilité, liquidité, endettement)
-- Projeter l'évolution financière à moyen terme avec des hypothèses paramétrables
-- Évaluer la soutenabilité du financement avec des indicateurs pro forma destinés aux investisseurs
-- Calculer la capacité d'endettement maximale compatible avec la santé financière de l'entreprise
+Pour l'aider à décider, j'ai construit un outil qui lit ses comptes, projette sa situation sur 5 ans et indique si elle peut rembourser ce nouvel emprunt.
 
 ## Données
-Un unique fichier excel avec au moins deux feuilles : "Compte de résultat" et "Bilan"
+Il s'agit d'un cas construit pour la démonstration, sur le modèle d'une biscuiterie industrielle de 60 salariés réalisant 12 M€ de chiffre d'affaires. Les comptes couvrent trois exercices (2023 à 2025) et suivent le format de la liasse fiscale française : 138 postes repérés par leur code officiel, regroupés en 23 agrégats pour l'analyse. Ils reproduisent les ratios moyens du secteur publiés par l'INSEE et les délais de paiement relevés par la Banque de France. Les autres postes, comme les stocks et les créances clients, découlent de l'activité selon des hypothèses plausibles, et les trois exercices sont cohérents entre eux : le bilan de fin d'année devient celui du début de l'année suivante, et le bilan s'équilibre chaque année.
 
-Struture de chacune des feuilles : les libellés comptables en lignes et les années en colonnes
 
 #### [Télécharger les données](https://github.com/Hines98/CAP-PME/blob/main/Ele%CC%81ments%20e%CC%81tats%20financiers%20-%20Portfolio.xlsx)
 #### [Télécharger le rapport PBI sous format PDF](https://github.com/Hines98/CAP-PME/blob/main/Rapport%20PBI.pdf)
 #### [Télécharger le fichier Mode de calcul](https://github.com/Hines98/CAP-PME/blob/main/Mode%20de%20calcul.pdf)
 
+## Méthodologie
+J'ai d'abord mis en place un format d'entrée universel des données. L'entreprise remplit un fichier Excel type où chaque montant est repéré par son code de liasse fiscale. Les intitulés des postes varient d'un cabinet comptable à l'autre, les codes officiels non. L'outil fonctionne ainsi pour n'importe quelle PME au régime réel. Un script Python vérifie ensuite les codes, signale les postes indispensables à l'outil final laissés vides, contrôle que l'actif égale le passif et que le résultat recalculé égale le résultat déclaré. Une projection construite sur des comptes faux conduirait à une décision fausse. Le script produit enfin un fichier de 23 agrégats, connecté à Power BI.
+
 ## Livrable
-On a un rapport Power BI avec plusieurs onglets.
 
-- (1) **KPIs & Ratios - Année de Référence** : un onglet présentant  15 indicateurs de l'année de référence organisés en 3 catégories (performance opérationnele, endettement, structure financière et liquidité) avec des codes couleurs automatiques selon secteur d'activité et des commentaires d'interprétation intégrés (BFR/CA, DSCR)
 
-<img width="1173" height="664" alt="image" src="https://github.com/user-attachments/assets/40f6a7f8-454b-4c6d-8c7c-8db2442e5884" />
+## Résultats clés
+Pour la biscuiterie, les ventes ont progressé de 7,8% puis de 8,1% entre 2023 et 2025, et les charges d'exploitation de 7,1 % puis de 7,0 %. Le scénario tendance retient donc 8 % et 7 %, et le scénario prudent 4% et 4%. Les dotations suivent le même taux que les ventes, puisque l'entreprise investit chaque année une part de ses ventes. Les investissements courants sont fixés à 5 % du chiffre d'affaires, le niveau d'une année normale dans ses comptes (4,7 % en 2023, 3,8 % en 2025 ; 2024 est exceptionnelle à 9,9 %) et la moyenne des PME industrielles selon l'INSEE. L'impôt est au taux normal de 25 %.
 
-- (2) **Hypothèses investisseurs** : un onglet de saisie des paramètres de financement (montant, taux, durée)
-- (3) **Capacité de financement soutenable** : un onglet qui calcule le montant maximal d'emprunt compatible avec la CAF et l'annuité maximale soutenable
-- (4) **Suivi des amortissements** : onglet présentant le tableau d'amortissement dynamique (annuités constantes)
+**Les chiffres ci-dessous correspondent au scénario prudent.**
 
-<img width="1307" height="734" alt="image" src="https://github.com/user-attachments/assets/91993902-9de8-4cb8-ad82-6f718aa78180" />
- 
-- (5) **Prévisionnel X ans - Exploitation** : cet onglet présente le compte de résultat prévisionnel complet sur un horizon de 5 ans maximum avec des paramètres pour des scénarios multiples
+Avec l'emprunt de 3 M€ sur 7 ans, le DSCR est de 0,74 la première année : l'entreprise devrait rembourser 1,04 M€ (dont 0,55 M€ pour ses emprunts déjà en cours), alors que son activité ne dégage que 0,78 M€. Le DSCR reste sous 1 pendant quatre ans. Pour comparaison, compte tenu de ses emprunts actuels et avec un DSCR cible de 1,40, la biscuiterie ne pourrait emprunter qu'environ 120 000 € de plus.
 
-  <img width="1286" height="729" alt="image" src="https://github.com/user-attachments/assets/054fb70e-1f0c-41ef-9310-b3e86d0f0688" />
+En réduisant le montant de l'emprunt, le DSCR repasse au-dessus de 1 la première année avec 1,55 M€ sur 7 ans, ou 2 M€ sur 10 ans. Ces montants sont un plafond, sans aucune marge de sécurité car le DSCR n'y dépasse 1 que d'un centième.
 
-- (7) **Analyse Financière Prévisionnelle** : cet onglet présente les mêmes indicateurs que dans l'onglet (1)
-  
-- (8) **Lecture investisseurs - Pro forma** : onglet présentant les indicateurs pro forma (DSCR, couverture des intérêts pro forma, trésorerie après service de la dette, trésorerie après service de la dette sur CA) sur la base des hypothèses investisseurs et les messages d'interprétation selon seuils
+Enfin, la trésorerie devient négative dès la deuxième année, même sans le projet : (−145 000 €) en 2027, puis environ (−675 000 €) en 2029. Elle est d'ailleurs déjà passée de 869 000 € à 472 000 € entre 2023 et 2025. Les investissements courants, la hausse du besoin en fonds de roulement et le remboursement des emprunts actuels dépassent ce que l'activité dégage. 
 
-**NB :**
-- Consultez le ficher "Mode de calcul" pour retrouver les formules de calcul des KPIs
-- Les projections s'appuient sur des paramètres métier saisis par l'expert-comptable : hypothèses d'activité (croissance du CA, évolution des charges...), hypothèses de structure (BFR, CAPEX) et hypothèses de financement (montant, taux, durée, DSCR cible). Ces paramètres permettent de générer des scénarios multiples et de tester la sensibilité du modèle.
+Cette conclusion vaut aussi dans le scénario tendance : même avec une croissance de 8 % par an, la trésorerie reste négative les cinq années avec l'emprunt de 3 M€.
+
+## Recommandation
+La biscuiterie nedevrait pas financer la ligne de production par un emprunt de 3 M€. Pendant quatre ans, l'activité ne dégagerait pas assez pour couvrir les remboursements, et l'entreprise devrait puiser dans une trésorerie déjà en baisse. Il faudrait plutôt limiter l'emprunt à 2 M€ au maximum, sur 10 ans, et financer le reste par un apport des associés ou une aide publique. Mais avant tout engagement, l'entreprise doit mettre en place un plan d'amélioration de sa trésorerie puisque celle-ci se dégrade même sans le projet.
+
+## Limites et suites possibles
+L'outil reste à tester sur les comptes d'une vraie entreprise, et la saisie depuis la liasse fiscale est aujourd'hui manuelle.
+
+Les comptes ne donnent pas le calendrier de remboursement des emprunts que la biscuiterie avait déjà avant le projet (2,04 M€ fin 2025). L'outil suppose qu'elle continue de rembourser 480 000 € par an, comme en 2025, jusqu'à épuisement. Si l'un de ces emprunts se terminait plus tôt, les remboursements baisseraient et le DSCR s'améliorerait plus vite. Ces anciens emprunts pèsent plus de la moitié des remboursements de la première année.
+
+La projection n'attribue aucune vente supplémentaire à la nouvelle ligne de production, sauf si l'utilisateur relève lui-même le taux de croissance. Elle n'intègre pas non plus son amortissement, ni la possibilité de déduire une perte des bénéfices des années suivantes. Les résultats sont donc plutôt prudents.
+
+Enfin, si la biscuiterie n'emprunte que 2 M€, l'outil suppose que le million restant (apport des associés ou aide publique) n'a pas à être remboursé. S'il s'agissait d'un prêt des associés ou d'un prêt aidé, ses échéances s'ajouteraient. Alors le DSCR baisserait et le plafond de 2 M€ serait trop élevé.
+
+Pour aller plus loin, l'outil pourrait lire automatiquement les liasses fiscales au format PDF, intégrer le calendrier réel des emprunts et comparer les ratios à des références sectorielles publiques.
+
+## Compétences mobilisées et liens
+- Python (pandas) pour lire le fichier Excel, contrôler la cohérence comptable et préparer les données ;
+- Power BI (Power Query et DAX) pour la projection sur 5 ans, le tableau d'amortissement et les scénarios paramétrables ; analyse financière (soldes intermédiaires de gestion, capacité d'autofinancement, DSCR, besoin en fonds de roulement).
 
