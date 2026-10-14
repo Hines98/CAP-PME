@@ -10,12 +10,6 @@ Il s'agit d'un cas construit pour la démonstration, sur le modèle d'une biscui
 
 L’outil fonctionne dès un exercice, mais trois sont recommandés : il en faut au moins deux pour calculer une évolution, et trois pour repérer une année atypique.
 
-
-#### [Télécharger le référentiel de la liasse fiscale](https://github.com/Hines98/CAP-PME/blob/main/Referentiel_liasse.csv)
-#### [Télécharger les données traitées](https://github.com/Hines98/CAP-PME/raw/refs/heads/main/Etats_financiers_power_bi.xlsx)
-#### [Télécharger le rapport PBI](https://github.com/Hines98/CAP-PME/blob/main/Rapport%20PBI.pdf)
-#### [Télécharger le fichier Mode de calcul](https://github.com/Hines98/CAP-PME/blob/main/Mode%20de%20calcul.pdf)
-
 ## Méthodologie
 J’ai d’abord mis en place un format d’entrée universel des données. Pour utiliser l’outil, l’entreprise saisit manuellement les montants de sa liasse fiscale dans un fichier Excel type ([télécharger le fichier type](https://github.com/Hines98/CAP-PME/blob/main/Fichier_type_etats_financiers.xlsx)), où chaque montant est repéré par son code de liasse fiscale. Les intitulés des postes varient d’un cabinet comptable à l’autre, les codes officiels non. L’outil fonctionne ainsi pour n’importe quelle PME au régime réel. Un script Python vérifie ensuite les codes, signale les postes indispensables à l’outil final laissés vides, contrôle que l’actif égale le passif et que le résultat recalculé égale le résultat déclaré, car une projection construite sur des comptes faux conduirait à une décision fausse. Le script produit enfin un fichier de 23 agrégats, connecté à Power BI.
 
@@ -63,4 +57,6 @@ Pour aller plus loin, l'outil pourrait lire automatiquement les liasses fiscales
 ## Compétences mobilisées et liens
 - Python (pandas) pour lire le fichier Excel, contrôler la cohérence comptable et préparer les données ;
 - Power BI (Power Query et DAX) pour la projection sur 5 ans, le tableau d'amortissement et les scénarios paramétrables ; analyse financière (soldes intermédiaires de gestion, capacité d'autofinancement, DSCR, besoin en fonds de roulement).
+
+Liens : [Notebook Python](https://github.com/Hines98/CAP-PME/blob/main/Script.ipynb) · [Fichier Excel type à remplir](https://github.com/Hines98/CAP-PME/raw/refs/heads/main/Etats_financiers_power_bi.xlsx) · [Référentiel liasse fiscale](https://github.com/Hines98/CAP-PME/blob/main/Referentiel_liasse.csv) · [Rapport Power BI (.pbix)] · [Rapport PDF]
 
