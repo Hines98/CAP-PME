@@ -10,19 +10,30 @@ Il s'agit d'un cas construit pour la démonstration, sur le modèle d'une biscui
 
 
 #### [Télécharger les données](https://github.com/Hines98/CAP-PME/blob/main/Ele%CC%81ments%20e%CC%81tats%20financiers%20-%20Portfolio.xlsx)
-#### [Télécharger le rapport PBI sous format PDF](https://github.com/Hines98/CAP-PME/blob/main/Rapport%20PBI.pdf)
+#### [Télécharger le rapport PBI](https://github.com/Hines98/CAP-PME/blob/main/Rapport%20PBI.pdf)
 #### [Télécharger le fichier Mode de calcul](https://github.com/Hines98/CAP-PME/blob/main/Mode%20de%20calcul.pdf)
 
 ## Méthodologie
-J'ai d'abord mis en place un format d'entrée universel des données. L'entreprise remplit un fichier Excel type où chaque montant est repéré par son code de liasse fiscale. Les intitulés des postes varient d'un cabinet comptable à l'autre, les codes officiels non. L'outil fonctionne ainsi pour n'importe quelle PME au régime réel. Un script Python vérifie ensuite les codes, signale les postes indispensables à l'outil final laissés vides, contrôle que l'actif égale le passif et que le résultat recalculé égale le résultat déclaré. Une projection construite sur des comptes faux conduirait à une décision fausse. Le script produit enfin un fichier de 23 agrégats, connecté à Power BI.
+J’ai d’abord mis en place un format d’entrée universel des données. Pour utiliser l’outil, l’entreprise saisit manuellement les montants de sa liasse fiscale dans un fichier Excel type ([télécharger le fichier type]()), où chaque montant est repéré par son code de liasse fiscale. Les intitulés des postes varient d’un cabinet comptable à l’autre, les codes officiels non. L’outil fonctionne ainsi pour n’importe quelle PME au régime réel. Un script Python vérifie ensuite les codes, signale les postes indispensables à l’outil final laissés vides, contrôle que l’actif égale le passif et que le résultat recalculé égale le résultat déclaré, car une projection construite sur des comptes faux conduirait à une décision fausse. Le script produit enfin un fichier de 23 agrégats, connecté à Power BI.
 
 ## Livrable
+Le rapport Power BI compte six onglets, organisés dans l’ordre où l’utilisateur s’en sert : choisir ses hypothèses, faire le diagnostic de l’année de référence, définir l’emprunt, puis projeter la situation sur 5 ans jusqu’au verdict. Les taux de prévision se saisissent dans un panneau à gauche, commun à toutes les pages. Une modification se répercute donc immédiatement partout. Les pages qui peuvent signaler un risque affichent la même légende avec une icône rouge apparaît dès qu’un seuil critique est franchi.
+
+- Choix des hypothèses (onglet « Repères historiques »): cet onglet aide l'utilisateur à choisir les taux de prévision qu'il saisit dans les cases de gauche (croissance des ventes, des charges, des dotations, investissements courants, taux d'impôt). Il affiche l'évolution passée de l'entreprise, année par année, et propose deux scénarios. Un scénario « tendance » qui prolonge l'évolution des comptes et un scénario « prudent » qui retient une croissance deux fois plus faible, avec des charges qui progressent au même rythme que les ventes, donc une marge qui cesse de s'améliorer. Je propose ces deux scénarios parce qu'une recommandation qui ne tient que dans le scénario favorable ne vaut rien. L'utilisateur reste libre de saisir ses propres taux.
+
+- Diagnostic de départ (onglet « KPIs et ratios »): il présente la situation de l'année de référence (rentabilité (valeur ajoutée, EBE, résultat, capacité d'autofinancement), structure financière (trésorerie, besoin en fonds de roulement, liquidité) et endettement (dette, DSCR, couverture des intérêts)). C'est le point de départ de toute projection.
+
+- Définition de l'emprunt (onglet « Hypothèses de financement »): l'utilisateur y saisit le montant, le taux et la durée de l'emprunt. La page calcule en regard le montant que l'entreprise pourrait emprunter en plus de ses emprunts actuels, compte tenu de sa capacité d'autofinancement et d'un niveau de sécurité qu'il choisit (le « DSCR cible »). L'onglet « Suivi des amortissements » détaille ensuite, année par année, les intérêts et le capital remboursés.
+
+- Projection sur 5 ans (onglets « Prévisionnel 5 ans » et « Analyse financière prévisionnelle »): le premier projette le compte de résultat avec les intérêts du nouvel emprunt. Le second suit la trésorerie, la dette et les ratios chaque année avec les remboursements des emprunts existants et du nouvel emprunt qui sont retirés de la trésorerie. Il se termine par un verdict pour chaque année.
+
+Le verdict de chaque année repose sur deux indicateurs. Le premier, le DSCR, compare ce que l’activité dégage dans l’année (la capacité d’autofinancement) aux remboursements de l’année : sous 1, l’entreprise ne peut pas payer ses échéances avec ses propres ressources. Le second est la trésorerie après remboursements : si elle devient négative, l’entreprise doit trouver de l’argent ailleurs pour faire face à ses dépenses. Les pages affichent aussi une alerte quand le ratio de liquidité passe sous 1, c’est-à-dire quand les dettes à payer dans l’année dépassent ce que l’entreprise peut encaisser dans le même délai. Ces trois seuils ne sont pas des conventions : chacun marque le point où l’entreprise ne peut plus faire face à ses paiements avec ses propres moyens. C’est pourquoi ils s’appliquent à toutes les entreprises. 
 
 
 ## Résultats clés
 Pour la biscuiterie, les ventes ont progressé de 7,8% puis de 8,1% entre 2023 et 2025, et les charges d'exploitation de 7,1 % puis de 7,0 %. Le scénario tendance retient donc 8 % et 7 %, et le scénario prudent 4% et 4%. Les dotations suivent le même taux que les ventes, puisque l'entreprise investit chaque année une part de ses ventes. Les investissements courants sont fixés à 5 % du chiffre d'affaires, le niveau d'une année normale dans ses comptes (4,7 % en 2023, 3,8 % en 2025 ; 2024 est exceptionnelle à 9,9 %) et la moyenne des PME industrielles selon l'INSEE. L'impôt est au taux normal de 25 %.
 
-**Les chiffres ci-dessous correspondent au scénario prudent.**
+**Les résultats ci-dessous sont obtenus avec les hypothèses du scénario prudent : ventes, charges d’exploitation et dotations en hausse de 4 % par an, investissements courants à 5 % du chiffre d’affaires, impôt à 25 %, et un emprunt de 3 M€ sur 7 ans à 3,55 %.**
 
 Avec l'emprunt de 3 M€ sur 7 ans, le DSCR est de 0,74 la première année : l'entreprise devrait rembourser 1,04 M€ (dont 0,55 M€ pour ses emprunts déjà en cours), alors que son activité ne dégage que 0,78 M€. Le DSCR reste sous 1 pendant quatre ans. Pour comparaison, compte tenu de ses emprunts actuels et avec un DSCR cible de 1,40, la biscuiterie ne pourrait emprunter qu'environ 120 000 € de plus.
 
