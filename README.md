@@ -6,7 +6,16 @@ Avant de financer un investissement, un dirigeant de PME et son expert-comptable
 Pour l'aider à décider, j'ai construit un outil qui lit ses comptes, projette sa situation sur 5 ans et indique si elle peut rembourser ce nouvel emprunt.
   
 ## Données
-Il s'agit d'un cas construit pour la démonstration, sur le modèle d'une biscuiterie industrielle de 60 salariés réalisant 12 M€ de chiffre d'affaires. Les comptes couvrent trois exercices (2023 à 2025) et suivent le format de la liasse fiscale française : 138 postes repérés par leur code officiel, regroupés en 23 agrégats pour l'analyse. Ils reproduisent les ratios moyens du secteur publiés par l'INSEE et les délais de paiement relevés par la Banque de France. Les autres postes, comme les stocks et les créances clients, découlent de l'activité selon des hypothèses plausibles, et les trois exercices sont cohérents entre eux : le bilan de fin d'année devient celui du début de l'année suivante, et le bilan s'équilibre chaque année.
+Il s'agit d'un cas construit pour la démonstration, sur le modèle d'une biscuiterie industrielle de 60 salariés réalisant 12 M€ de chiffre d'affaires. Les comptes couvrent trois exercices (2023 à 2025) et suivent le format de la liasse fiscale française : 138 postes repérés par leur code officiel, regroupés en 23 agrégats pour l'analyse. Ils sont calibrés sur les ratios moyens publiés par l’INSEE pour la fabrication de produits de boulangerie-pâtisserie et de pâtes alimentaires (un groupe qui inclut les boulangeries artisanales), et sur les délais de paiement relevés par la Banque de France. 
+
+| Ratio | Biscuiterie (2025) | Référence publique |
+|---|---|---|
+| Valeur ajoutée / chiffre d'affaires | 34,8 % | 35,1 % (*[INSEE, Ésane 2023, boulangerie-pâtisserie et pâtes](https://www.insee.fr/fr/statistiques/2015380)*) |
+| Frais de personnel / chiffre d'affaires | 25 % | 27,2 % (*[INSEE, Ésane 2023, boulangerie-pâtisserie et pâtes](https://www.insee.fr/fr/statistiques/2015380)*) |
+| Investissements / chiffre d'affaires | 3,8 % à 9,9 % selon l'année | 4,9 % (*[INSEE, Ésane 2023, boulangerie-pâtisserie et pâtes](https://www.insee.fr/fr/statistiques/2015380)*) |
+| Délai de paiement des fournisseurs | 50 jours | 50 jours en 2024, toutes entreprises (*[Banque de France, Observatoire des délais de paiement 2025](https://www.banque-france.fr/fr/publications-et-statistiques/publications/rapport-de-lobservatoire-des-delais-de-paiement-2025)*) |
+
+Les autres postes, comme les stocks et les créances clients, découlent de l'activité selon des hypothèses plausibles, et les trois exercices sont cohérents entre eux : le bilan de fin d'année devient celui du début de l'année suivante, et le bilan s'équilibre chaque année.
 
 L’outil fonctionne dès un exercice, mais trois sont recommandés : il en faut au moins deux pour calculer une évolution, et trois pour repérer une année atypique.
 
@@ -27,7 +36,7 @@ Le rapport Power BI compte six onglets, organisés dans l’ordre où l’utilis
 Le verdict de chaque année repose sur deux indicateurs. Le premier, le DSCR, compare ce que l’activité dégage dans l’année (la capacité d’autofinancement) aux remboursements de l’année : sous 1, l’entreprise ne peut pas payer ses échéances avec ses propres ressources. Le second est la trésorerie après remboursements : si elle devient négative, l’entreprise doit trouver de l’argent ailleurs pour faire face à ses dépenses. Les pages affichent aussi une alerte quand le ratio de liquidité passe sous 1, c’est-à-dire quand les dettes à payer dans l’année dépassent ce que l’entreprise peut encaisser dans le même délai. Ces trois seuils ne sont pas des conventions : chacun marque le point où l’entreprise ne peut plus faire face à ses paiements avec ses propres moyens. C’est pourquoi ils s’appliquent à toutes les entreprises. 
 
 ## Résultats clés
-Pour la biscuiterie, les ventes ont progressé de 7,8% puis de 8,1% entre 2023 et 2025, et les charges d'exploitation de 7,1 % puis de 7,0 %. Le scénario tendance retient donc 8 % et 7 %, et le scénario prudent 4% et 4%. Les dotations suivent le même taux que les ventes, puisque l'entreprise investit chaque année une part de ses ventes. Les autres produits d’exploitation (47 000 € en 2025) évoluent eux aussi au rythme des ventes. Les investissements courants sont fixés à 5 % du chiffre d'affaires, le niveau d'une année normale dans ses comptes (4,7 % en 2023, 3,8 % en 2025 ; 2024 est exceptionnelle à 9,9 %) et la moyenne des PME industrielles selon l'INSEE. L'impôt est au taux normal de 25 %.
+Pour la biscuiterie, les ventes ont progressé de 7,8% puis de 8,1% entre 2023 et 2025, et les charges d'exploitation de 7,1 % puis de 7,0 %. Le scénario tendance retient donc 8 % et 7 %, et le scénario prudent 4% et 4%. Les dotations suivent le même taux que les ventes, puisque l'entreprise investit chaque année une part de ses ventes. Les autres produits d’exploitation (47 000 € en 2025) évoluent eux aussi au rythme des ventes. Les investissements courants sont fixés à 5 % du chiffre d'affaires, le niveau d'une année normale dans ses comptes (4,7 % en 2023, 3,8 % en 2025 ; 2024 est exceptionnelle à 9,9 %) et et proche de la moyenne du secteur selon l’INSEE (4,9 %). L'impôt est au taux normal de 25 %.
 
 ***Les résultats ci-dessous sont obtenus avec les hypothèses du scénario prudent : ventes, charges d’exploitation et dotations en hausse de 4 % par an, investissements courants à 5 % du chiffre d’affaires, impôt à 25 %, et un emprunt de 3 M€ sur 7 ans à 3,55 %.***
 
@@ -44,6 +53,8 @@ La biscuiterie ne devrait pas financer la ligne de production par un emprunt de 
 
 ## Limites et suites possibles
 L'outil reste à tester sur les comptes d'une vraie entreprise, et la saisie depuis la liasse fiscale est aujourd'hui manuelle.
+
+Les comptes de la biscuiterie sont calibrés sur un groupe qui inclut l’artisanat. Les seuls industriels du secteur ont en moyenne une valeur ajoutée plus faible (24 % du chiffre d’affaires) et une marge plus élevée (EBE égal à 31 % de la valeur ajoutée) (*[Agreste, Ésane 2023](https://www.agreste.agriculture.gouv.fr/agreste-web/download/publication/publie/Chd2515/cd2025-15_Esane-2023.pdf)*).
 
 Les comptes ne donnent pas le calendrier de remboursement des emprunts que la biscuiterie avait déjà avant le projet (2,04 M€ fin 2025). L'outil suppose qu'elle continue de rembourser 480 000 € par an, comme en 2025, jusqu'à épuisement. Si l'un de ces emprunts se terminait plus tôt, les remboursements baisseraient et le DSCR s'améliorerait plus vite. Ces anciens emprunts pèsent plus de la moitié des remboursements de la première année.
 
