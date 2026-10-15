@@ -69,6 +69,6 @@ Pour aller plus loin, l'outil pourrait lire automatiquement les liasses fiscales
 - Power BI (Power Query et DAX) pour la projection sur 5 ans, le tableau d'amortissement et les scénarios paramétrables ;
 - Analyse financière (soldes intermédiaires de gestion, capacité d'autofinancement, DSCR, besoin en fonds de roulement).
 
-Liens : [Notebook Python](https://github.com/Hines98/CAP-PME/blob/main/Script.ipynb) · [Fichier Excel type à remplir](https://github.com/Hines98/CAP-PME/raw/refs/heads/main/Etats_financiers_power_bi.xlsx) · [Référentiel liasse fiscale](https://github.com/Hines98/CAP-PME/blob/main/Referentiel_liasse.csv) · [Rapport Power BI (.pbix)] · [Rapport PDF]
+Liens : [Notebook Python](https://github.com/Hines98/CAP-PME/blob/main/Script.ipynb) · [Fichier Excel type à remplir](https://github.com/Hines98/CAP-PME/raw/refs/heads/main/Etats_financiers_power_bi.xlsx) · [Référentiel liasse fiscale](https://github.com/Hines98/CAP-PME/blob/main/Referentiel_liasse.csv) · [Rapport Power BI (.pbix)] · [Rapport PDF](https://github.com/Hines98/CAP-PME/blob/main/Rapport%20PDF.pdf)
 
 
